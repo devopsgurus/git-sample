@@ -1,0 +1,57 @@
+pipeline 
+{
+    agent any
+
+    stages 
+    {
+        stage('Git') 
+        {
+            steps 
+            {
+                echo 'VCS - Version Control System'
+            }
+        }
+        stage('Maven') 
+        {
+            steps
+            {
+                echo 'WAR/JAR files'
+            }
+        }
+        stage('Nexus-1') 
+        {
+            steps
+            {
+                echo 'Private repo SCM - Source code management'
+            }
+        }
+        stage('Nexus-2') 
+        {
+            steps
+            {
+                echo 'Artifactory'
+            }
+        }
+        stage('Tomcat') 
+        {
+            steps
+            {
+                echo 'Servelet application app server'
+            }
+        }
+        stage('SonarQube') 
+        {
+            steps
+            {
+                echo 'Quality'
+            }
+        }
+        stage('Docker') 
+        {
+            steps
+            {
+                echo 'Docker image and deployment'
+            }
+        }
+    }
+}
