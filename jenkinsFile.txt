@@ -1,0 +1,22 @@
+pipeline 
+{
+    agent any
+      tools 
+        {
+            maven "maven3"
+        }
+    
+    stages 
+    {
+        stage('git')
+        {
+            steps
+            {
+                git branch: 'main', url: 'https://github.com/sathishrocky/Servlet-Application.git'
+            }
+        }
+       
+    }
+}
+
+
